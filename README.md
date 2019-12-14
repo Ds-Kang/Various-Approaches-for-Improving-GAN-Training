@@ -23,3 +23,8 @@ Using restrict learning by differential method
 ```
 $ python model.py --restrict_learning differential
 ```
+
+Using image as input method
+```
+$ python model.py --img_as_input True
+```

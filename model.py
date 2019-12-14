@@ -214,7 +214,7 @@ for epoch in range(opt.n_epochs):
         fake = Variable(Tensor(imgs.shape[0], 1).fill_(0.0), requires_grad=False)
 
         if opt.blur=="box":
-            p=max(1,int(8*(1-epoch/opt.n_epochs)))
+            p=max(1,int(8*(1-2*epoch/opt.n_epochs)))
             filter_imgs=filters.box_blur(imgs,kernel_size=(p,p))
         elif opt.blur=="interpolate":
             p=(epoch*len(dataloader)+i)/(opt.n_epochs*len(dataloader))
